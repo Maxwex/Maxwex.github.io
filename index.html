@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8" />
+    <title>Maxwex</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+      <section class="header">
+        <nav>
+          <a href="index.html"><img src="images/MW9.png"></a>
+            <div class="nav-links">
+              <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">PROJECTS</a></li>
+                <li><a href="">GAMES</a></li>
+              </ul>
+            </div>
+        </nav>
+          <div class="text-box">
+            <p>Hi I am</p>
+              <h1>MAXWEX</h1>
+          </div>
+
+
+      </section>
+
+      <section class="main">
+
+
+      </section>
+  </body>
+<script>
+    function rotateYDIV()
+    {
+        y=document.getElementById("rotate3D")
+        clearInterval(rotYINT)
+        rotYINT=setInterval("startYRotate()",10)
+    }
+    function startRotate()
+    {
+        n=n+1
+        x.style.transform="rotate(" + n + "deg)"
+        x.style.webkitTransform="rotate(" + n + "deg)"
+        x.style.OTransform="rotate(" + n + "deg)"
+        x.style.MozTransform="rotate(" + n + "deg)"
+        if (n==180 || n==360)
+        {
+            clearInterval(rotINT)
+            if (n==360){n=0}
+        }
+    }
+    function startYRotate()
+    {
+        ny=ny+1
+        y.style.transform="rotateY(" + ny + "deg)"
+        y.style.webkitTransform="rotateY(" + ny + "deg)"
+        y.style.OTransform="rotateY(" + ny + "deg)"
+        y.style.MozTransform="rotateY(" + ny + "deg)"
+        if (ny==180 || ny>=360)
+        {
+            clearInterval(rotYINT)
+            if (ny>=360){ny=0}
+        }
+    }
+    //-->
+</script>
+</html>
